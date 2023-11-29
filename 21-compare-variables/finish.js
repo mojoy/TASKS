@@ -9,6 +9,7 @@
 let myVariable1 = 10
 let myVariable2 = '5'
 
+
 // Напишите код здесь
 
 myVariable1 = '20'
