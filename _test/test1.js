@@ -31,7 +31,7 @@ for (key in object) {
 
 
 //упрядочевание свойств объекта
-
+/*
 let codes = {
     49: "Германия",
     42: "Швейцария",
@@ -42,4 +42,13 @@ let codes = {
 for (let code in codes) {
     console.log(code);
 }
+*/
+
+
+const myArray = [1,2,3]
+//console.log(myArray)
+
+myArray.forEach(el => console.log(el))
+
+
 

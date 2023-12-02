@@ -2,12 +2,14 @@
  *
  * Замените обычные функции на стрелочные
  */
-
+/*
 function mult(a, b) {
   return a * b
 }
+*/
+let mult = (a, b) => a * b
 
-setTimeout(function () {
+setTimeout( () => {
   console.log(mult(5, 10))
 }, 1000)
 // 50

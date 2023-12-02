@@ -11,7 +11,10 @@ const myArray = [5,69,159,56,36,89,361,195,489]
 
 
 console.log(`всего элементов в массиве: ${myArray.length}`)
-
+/*
 for (let i = 0; i < myArray.length; i++) {
     console.log(myArray[i]);
 }
+*/
+myArray.forEach(el => console.log(el))
+
