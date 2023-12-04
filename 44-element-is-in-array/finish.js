@@ -8,6 +8,15 @@
  */
 
 const transports = ['Bus', 'Car', 'Bicycle', 'Airplane']
+/*
+transports.forEach((element) => {
+    console.log(element)
+})
+*/
+
+function isElementInArray(inputArray, searchElement) {
+    return inputArray.includes(searchElement)
+  }
 
 console.log(isElementInArray(transports, 'Bus')) // true
 console.log(isElementInArray(transports, 'Phone')) // false

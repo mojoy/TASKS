@@ -14,6 +14,10 @@
 const a = [1, 2, 3]
 const b = [1, 2, 3]
 
+function areArraysEqual(firstArray, secondArray) {
+
+}
+
 console.log(a === b) // false (Почему?)
 
 const c = [2, 1, 3]

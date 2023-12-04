@@ -12,23 +12,25 @@
  * как и в конце этой задачи
  */
 
+
+
 const photosGallery = (title, dimensions, date) => {
   return {
-    title: title,
-    info: function() {
+    date,
+    title,
+    [dimensions]: true,
+    info() {
       console.log(
-        "Фото "${title}" имеет разрешение ${date}`
+        `Фото "${title}" имеет разрешение ${dimensions}`
       );
     },
-    dimensions: dimensions
-    publishInfo: () => {
+    publishInfo() {
       console.log(
-        `Фото было опубликовано ${Math.floor(
+        `Фото "${title}" было опубликовано ${Math.floor(
           (new Date().getTime() - date.getTime()) / 1000
         )} секунды назад`
       );
-    ,
-    date: date
+    },
   }
 }
 
@@ -41,7 +43,7 @@ const myDogPhoto = photosGallery(
 const testDimension1 = "1920x1080"
 const testDimension2 = "1080x720"
 
-myDogPhoto.info()
+myDogPhoto.info() // этот метод все еще имеет доступ к параметрам функции родительской и такой метод называется замыканием
 /* Фото "My dog" имеет разрешение 1920x1080 */
 
 setTimeout(() => myDogPhoto.publishInfo(), 2000)
@@ -52,3 +54,9 @@ setTimeout(() => myDogPhoto.publishInfo(), 2000)
 
 console.log(myDogPhoto[testDimension1]) // true
 console.log(myDogPhoto[testDimension2]) // undefined
+
+
+//можно вывести все свойства объекта
+//Object.keys - вернет объект со всеми ключами
+
+console.log(Object.keys(myDogPhoto))

@@ -7,10 +7,18 @@
  * 3. Также вызовите обе функции
  */
 
+
+
+// в такой записи функции можно обращатся к функции как до так и после ее объявления
 function firstFunction(a, b) {
   return a + b
 }
 
+
+console.log(firstFunction(5, 15))
+
+//в таком варианте функция присваивается переменной и по этому до объявления переменной нельзя обращаться к функции
 const secondFunction = function (a, b) {
   return a + b
 }
+console.log(secondFunction(5, 15))
