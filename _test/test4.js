@@ -60,8 +60,6 @@ const lettersCountString = wordsArray.map(word => word.length).join(',');
 const lettersCountArray = lettersCountString.split(',').map(Number);
 
 console.log(lettersCountArray);
-
-
 //поменять направление текста
 /*
     split(' ') разделяет строку на массив слов.
