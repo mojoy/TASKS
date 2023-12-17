@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+   <meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>test</title>
+   <meta name="robots" content="noindex, nofollow">
+   <link href="css/main.css" rel="stylesheet">
+   <style>
+      .content-hidden {
+         display: none;
+      }
+      .fade-block {
+         padding: 0;
+         margin: 0;
+         position: absolute;
+         inset: 0;
+         z-index: 999;
+         background: rgba(0,0,0,0.5);
+      }
+      .fade-block--hidden {
+         display: none;
+      }
+      .modal-box {
+         position: absolute;
+         max-width: 640px;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%,-50%);
+      }
+      .modal-box__title {
+         font-size: 32px;
+         display: flex;
+         text-align: center;
+         justify-content: center;
+      }
+      .modal-box__close {
+         position: absolute;
+         right: 25px;
+         top: 25px;
+         z-index: 6;
+         cursor: pointer;
+      }
+   </style>
+</head>
+<body>
+   <button data-button="modal-1" class="button" type="button">открыть окно 1</button>
+   <button data-button="modal-2" class="button" type="button">открыть окно 2</button>
+   <button data-button="modal-3" class="button" type="button">открыть окно 3</button>
+
+   <div id="modal-1" data-modal class="fade-block fade-block--hidden">
+      <div class="bordered-block modal-box">
+         <div class="modal-box__title">Title 1</div>
+         блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом 
+         <button data-model-close type="button" class="modal-box__close">close</button>
+      </div>
+   </div>
+
+   <div id="modal-2" data-modal class="fade-block fade-block--hidden">
+      <div class="bordered-block modal-box">
+         <div class="modal-box__title">Title 2</div>
+         блок с конлок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом 
+         <button data-model-close type="button" class="modal-box__close">close</button>
+      </div>
+   </div>
+
+   <div id="modal-3" data-modal class="fade-block fade-block--hidden">
+      <div class="bordered-block modal-box">
+         <div class="modal-box__title">Title 3</div>
+         блок с конлок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом блок с контентом 
+         <button data-model-close type="button" class="modal-box__close">close</button>
+      </div>
+   </div>
+
+
+   <script src="js/modal-multi.js"></script>
+</body>
+</html>

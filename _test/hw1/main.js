@@ -102,3 +102,68 @@ for (key in user) {
     console.log(user[key])
 }
 */
+
+
+
+const list = document.body.querySelector('.list');
+const listHeight = list.clientHeight;
+const listWidth = list.clientWidth;
+
+console.log(listHeight);
+console.log(listWidth);
+
+
+/// ширина и высота документа включая прокрученную часть
+
+let scrollWidth = Math.max(
+    document.body.scrollWidth, document.documentElement.scrollWidth,
+    document.body.offsetWidth, document.documentElement.offsetWidth,
+    document.body.clientWidth, document.documentElement.clientWidth,
+)
+
+
+// высота контента
+let scrollHeight = Math.max(
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight,
+)
+
+console.log(scrollWidth);
+console.log(scrollHeight);
+
+//получение значение прокрученных пикселей сверху
+//только чтение
+
+const scrollY = window.scrollY;
+console.log(scrollY);
+
+
+
+
+//прокрутка страницы на 50рх
+const btn = document.body.querySelector('.btn');
+
+btn.addEventListener('click', function () {
+    setScrollToOptions();
+});
+
+function setScrollBy() {
+    window.scrollBy(0, 50);
+    const windowScrollTop = window.scrollY;
+    console.log(windowScrollTop);
+}
+
+function setScrollTo() {
+    window.scrollTo(0, 50);
+    const windowScrollTop = window.scrollY;
+    console.log(windowScrollTop);
+}
+
+function setScrollToOptions() {
+    window.scrollTo({
+        top: 500,
+        left: 0,
+        behavior: "smooth" // говорит о плавной прокрутки
+    })
+}
