@@ -29,6 +29,6 @@ function modal() {
       this.classList.add('fade-block--hidden');
     })
   })
-  
+
 }
 modal();

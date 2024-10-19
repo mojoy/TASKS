@@ -15,9 +15,7 @@ function tabs() {
           item.classList.add("tab-content--hidden");
         });
 
-        const dataTabContent = document.querySelector(
-          '.tab-content[data-tab-content="' + this.dataset.tab + '"]'
-        );
+        const dataTabContent = document.querySelector('.tab-content[data-tab-content="' + this.dataset.tab + '"]');
         this.classList.add("tab-nav__item--active");
 
         if (dataTabContent) {
@@ -26,6 +24,19 @@ function tabs() {
       });
     });
   }
+/*
+  function isTouchDevice() {
+    return "ontouchstart" in window || navigator.maxTouchPoints;
+  }
+
+  if (isTouchDevice()) {
+    console.log("Браузер поддерживает тач-события.");
+
+    
+  } else {
+    console.log("Браузер не поддерживает тач-события.");
+  }
+*/
 }
 
 tabs();
